@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2Sr-6B-L3I">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="XrH-Xd-iVj">
+            <objects>
+                <navigationController id="2Sr-6B-L3I" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6VI-qU-6Qz">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="e7c-Hl-EdB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Gq-ep-a36" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-719" y="118"/>
+        </scene>
+        <!--Burrito Buddy View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="BurritoBuddyViewController" customModule="BurritoBuddy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="eaV-gj-aUe">
+                                <rect key="frame" x="8" y="168" width="398" height="728"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="scrollIndicatorInsets" minX="0.0" minY="0.0" maxX="8" maxY="0.0"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OgX-Sy-mRn">
+                                    <size key="itemSize" width="174" height="224"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <view contentMode="scaleToFill" id="4s0-1R-jlG">
+                                <rect key="frame" x="0.0" y="200" width="414" height="333"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Looks like there's an error with the data, Would you like to reload?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QaK-Fb-RcN">
+                                        <rect key="frame" x="37.5" y="106" width="339" height="65"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="65" id="NVA-7k-l5Z"/>
+                                            <constraint firstAttribute="width" constant="339" id="pBg-qD-eXe"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GyT-eQ-Odm">
+                                        <rect key="frame" x="133" y="198" width="148" height="30"/>
+                                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="148" id="Oog-Pa-6Ms"/>
+                                        </constraints>
+                                        <state key="normal" title="Reload Burritos!">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="QaK-Fb-RcN" firstAttribute="centerX" secondItem="4s0-1R-jlG" secondAttribute="centerX" id="1EY-Jc-azf"/>
+                                    <constraint firstItem="QaK-Fb-RcN" firstAttribute="centerY" secondItem="4s0-1R-jlG" secondAttribute="centerY" constant="-28" id="COl-u0-XK6"/>
+                                    <constraint firstItem="GyT-eQ-Odm" firstAttribute="top" secondItem="QaK-Fb-RcN" secondAttribute="bottom" constant="27" id="WxH-Kc-WjG"/>
+                                    <constraint firstItem="GyT-eQ-Odm" firstAttribute="centerX" secondItem="4s0-1R-jlG" secondAttribute="centerX" id="t5B-lB-pAY"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eaV-gj-aUe" secondAttribute="trailing" constant="8" id="VcG-Da-idb"/>
+                            <constraint firstItem="eaV-gj-aUe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="cWE-3s-GXv"/>
+                            <constraint firstItem="eaV-gj-aUe" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="168" id="l8q-2l-azo"/>
+                            <constraint firstAttribute="bottom" secondItem="eaV-gj-aUe" secondAttribute="bottom" id="tqf-na-lvr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="w5G-ER-bve"/>
+                    <connections>
+                        <outlet property="burritoCollectionView" destination="eaV-gj-aUe" id="cJd-5b-OrP"/>
+                        <outlet property="errorView" destination="4s0-1R-jlG" id="HF7-VN-PSS"/>
+                        <outlet property="reloadTableButton" destination="GyT-eQ-Odm" id="gGJ-ew-aHR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="117.85714285714285"/>
+        </scene>
+    </scenes>
+</document>
